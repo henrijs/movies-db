@@ -1,12 +1,10 @@
-import Link from 'next/link'
+import MovieCard from './MovieCard'
 
-const MovieCardList = async ({ movies }) => {
+const MovieCardList = ({ movies }) => {
   return movies ? (
     <div>
         {movies.map((movie) => (
-          <div key={movie.imdbID}>
-            <Link href={{ pathname: `/movie/${movie.imdbID}` }}>{movie.Title}</Link>
-          </div>
+          <MovieCard key={movie.imdbID} movie={movie} />
         ))}
     </div>
 
