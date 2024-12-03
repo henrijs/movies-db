@@ -3,7 +3,7 @@
 import { delay } from "./delay"
 
 export const searchMovies = async ({ query, currentPage }: { query: string; currentPage: number; }) => {
-  // await delay()
+  await delay()
 
   let data = await fetch(`https://www.omdbapi.com/?apikey=${process.env.OMDBAPI_KEY}&type=movie&s=${query}&page=${currentPage}`)
   let movies = await data.json()
@@ -18,5 +18,5 @@ export const searchMovies = async ({ query, currentPage }: { query: string; curr
   // revalidatePath('/search')
   // redirect('/search')
 
-  return [ movies.Search, pageCount ]
+  return [ movies.Search, movies.totalResults, pageCount ]
 }
