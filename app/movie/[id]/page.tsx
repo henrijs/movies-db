@@ -1,5 +1,5 @@
 import { getMovie } from "@/utilities/getMovie"
-import { redirect } from "next/navigation"
+// import { redirect } from "next/navigation"
 import Image from "next/image"
 
 export default async function MoviePage({ params }) {
@@ -53,7 +53,7 @@ export default async function MoviePage({ params }) {
           <div className="overflow-x-auto">
             <table className="table table-zebra">
               <tbody>
-                {Object.entries(movieDetails).map(([key, value]) => (
+                {Object.entries(movieDetails).map(([key, value]: any[]) => (
                   <tr key={key}>
                     <th>{key}</th>
                     <td>{value}</td>
