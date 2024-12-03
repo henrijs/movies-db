@@ -9,7 +9,7 @@ const routes = [
 export default function Navigation() {
   return (
     <nav>
-      <ul>
+      <ul className="menu menu-horizontal px-1">
         {routes.map((route) => (
           <li key={route.href}>
             <Link href={route.href}>

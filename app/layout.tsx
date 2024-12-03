@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Movie DB',
+  title: 'Movies DB',
   description: 'A sample Next.js app',
 };
 

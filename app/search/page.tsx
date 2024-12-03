@@ -17,7 +17,7 @@ export default async function SearchPage({ searchParams }) {
   // console.log(movies.Search)
 
   return (
-    <div className="w-full max-w-screen-2xl px-5 mx-auto my-10">
+    <div className="w-full max-w-screen-2xl px-5 mx-auto my-10 min-h-[calc(100dvh-68px-52px-5rem)]">
       <h1 className="text-5xl font-bold mb-5">Search movies</h1>
       <SearchForm />
       <SearchResultsInfo query={query} resultCount={resultCount} />
