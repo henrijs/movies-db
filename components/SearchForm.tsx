@@ -1,19 +1,20 @@
 'use client'
 
 import { usePathname, useSearchParams, useRouter } from 'next/navigation'
+import { useDebouncedCallback } from 'use-debounce'
 
 export default function SearchForm() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
 
-  const updateQuery = (title: string) => {
+  const updateQuery = useDebouncedCallback((title: string) => {
     const params = new URLSearchParams(searchParams)
-
+    // On search, reset page and update/delete query.
+    params.set('page', '1')
     if (title) { params.set('title', title) } else { params.delete('title') }
-
     router.replace(`${pathname}?${params.toString()}`)
-  }
+  }, 400)
 
   return (
     <div>
