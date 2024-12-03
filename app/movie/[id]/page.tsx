@@ -1,7 +1,7 @@
 import { getMovie } from '@/utilities/getMovie'
 
 export default async function MoviePage({ params }) {
-  const movie = await getMovie('tt2527336')
+  const movie = await getMovie(params.id)
 
   return (
     <div>
