@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Create file `.env.local` in root of this project wit following content:
+
+```
+OMDBAPI_KEY=paste_you_key_here
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -17,6 +23,7 @@ Stop development server and do:
 ```bash
 npm run e2e:headless
 ```
+
 or
 
 ```bash
