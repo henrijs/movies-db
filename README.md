@@ -16,6 +16,10 @@ Stop development server and do:
 
 ```bash
 npm run e2e:headless
+```
+or
+
+```bash
 npm run component:headless
 ```
 
@@ -25,4 +29,4 @@ Search form just updates query. Pager takes page count from search results and c
 
 ## Challenges
 
-Couple of times I went wrong directions, tried compleatly unmanaged search form, but went with (little bit) managed form, created separate server action for fetching total count for query, but adjusted one for search. Theming libraries were not behaving, NextUI threw some error I did not have time to deal with and Mantine immediatly complained about components being server components, so I went with CSS only solution daisyUI.
+Couple of times I went wrong directions, tried compleatly unmanaged search form, but went with (little bit) managed form, created separate server action for fetching total count for query, but adjusted one for search. Theming libraries were not behaving, NextUI threw some error I did not have time to deal with and Mantine immediatly complained about components being server components, so I went with CSS only solution daisyUI. Also, it turns out there are quite many movies with "undefined" in their titles.
