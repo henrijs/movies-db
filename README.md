@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Visit Site
+
+Project is deployed to https://movies-db-woad-nine.vercel.app/.
+
 ## Getting Started
 
 Create file `.env.local` in root of this project wit following content:
