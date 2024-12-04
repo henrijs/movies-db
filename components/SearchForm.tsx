@@ -23,6 +23,7 @@ export default function SearchForm() {
         <input
           id="title"
           type="text"
+          placeholder="Enter movie title here"
           onChange={(e) => updateQuery(e.target.value)}
           defaultValue={searchParams.get('title')?.toString()}
           className="grow"
